@@ -2,6 +2,7 @@ package model.repository;
 
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 
@@ -59,4 +60,5 @@ public interface BaseRepository<T> {
 	 * @return uma lista de objetos do tipo T.
 	 */
 	public ArrayList<T> consultarTodos();
+	
 }

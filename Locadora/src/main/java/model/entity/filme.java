@@ -6,6 +6,10 @@ public class filme {
 	private String tipo;
 	private Integer duracao;
 	
+	public filme() {
+        super();
+    }
+	
 	public filme (Integer idFilme, String nome, String tipo, Integer duracao) {
 		super();
 		this.idFilme = idFilme;
