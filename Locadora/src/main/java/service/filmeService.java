@@ -44,7 +44,7 @@ public class filmeService {
         return filmeRepository.consultarPorId(id);
     }
 
-    public List<filme> consultarTodosClientes() {
+    public List<filme> consultarTodosFilmes() {
         return filmeRepository.consultarTodos();
     }
 	

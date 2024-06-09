@@ -12,15 +12,14 @@ public class locacaoService {
     }
 
     // Método para alugar um filme
-    public void alugarFilme(locacao novaLocacao) {
+    public locacao alugarFilme(locacao novaLocacao) {
         // Verifica se o cliente já possui 2 locações em aberto
         List<locacao> locacoesEmAberto = locacaoRepository.listLocacoesEmAbertoPorCliente(novaLocacao.getCliente());
         if (locacoesEmAberto.size() >= 2) {
             throw new IllegalStateException("O cliente já possui 2 filmes alugados.");
         }
 
-        // Persiste a nova locação
-        locacaoRepository.salvar(novaLocacao);
+        return locacaoRepository.salvar(novaLocacao);
     }
 
     // Método para finalizar uma locação
